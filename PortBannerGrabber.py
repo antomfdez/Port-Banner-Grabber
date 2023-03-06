@@ -19,7 +19,7 @@ for port in range(start_port, end_port+1):
     # try to connect to the host on the current port
     result = s.connect_ex((host, port))
 
-    # if the connection was successful, try to get the port version
+    # if the connection was successful, try to get the port banner info
     if result == 0:
         try:
             banner = s.recv(max_char)
